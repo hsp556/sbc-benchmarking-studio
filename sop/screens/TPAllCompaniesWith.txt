@@ -1,0 +1,24 @@
+LABEL: All companies with
+ADDRESS: /SearchExpert/By/TPAllCompaniesWith
+LANDED: https://tpcatalyst-r1.bvdinfo.com/202610-1/tpcatalyst/1/Companies/SearchExpert/By/TPAllCompaniesWith
+
+<h4> No choices made
+<a class="cancel"> Cancel
+<a class="button ok disabled"> OK
+<li #tab-Informations class="selected "> Company information
+<li #tab-Accounts class=" "> Accounts
+<li #tab-Identifiers class=" "> Identifiers
+<input #checkbox-857ba341c4cb4ee08750de769726a4fc name="ids" type="checkbox" class="checkbox"> AllCompaniesWithAddress
+<label class="checkbox" for="checkbox-857ba341c4cb4ee08750de769726a4fc"> An address
+<input #checkbox-512e33abf4ab4588857185a417b89704 name="ids" type="checkbox" class="checkbox"> AllCompaniesWithPhoneNumber
+<label class="checkbox" for="checkbox-512e33abf4ab4588857185a417b89704"> A phone number
+<input #checkbox-8b1e5d8c6a18422abb8b4fb783a73b42 name="ids" type="checkbox" class="checkbox"> AllCompaniesWithFaxNumber
+<label class="checkbox" for="checkbox-8b1e5d8c6a18422abb8b4fb783a73b42"> A fax number
+<input #checkbox-057d128e730146a8a9c554366c2c0be4 name="ids" type="checkbox" class="checkbox"> AllCompaniesWithWebsiteAddressSM
+<label class="checkbox" for="checkbox-057d128e730146a8a9c554366c2c0be4"> A website
+<input #checkbox-795666c4170c43828bc3da82a97d3809 name="ids" type="checkbox" class="checkbox"> AllCompaniesWithEmailSM
+<label class="checkbox" for="checkbox-795666c4170c43828bc3da82a97d3809"> An e-mail address
+<input #checkbox-71c12d94c3d642d086ff2ed96e163d01 name="ids" type="checkbox" class="checkbox"> AllCompaniesWithOverview
+<label class="checkbox" for="checkbox-71c12d94c3d642d086ff2ed96e163d01"> An overview
+<input #checkbox-1e3a7c9bdbb04c2a9c286df43ffb3e67 name="ids" type="checkbox" class="checkbox"> AllCompaniesWithTradeDescription
+<label class="checkbox" for="checkbox-1e3a7c9bdbb04c2a9c286df43ffb3e67"> A trade description (any language)

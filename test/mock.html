@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Mock search portal</title>
+<label for="region">Region</label>
+<select id="region"><option value="">--</option><option value="IN">India</option><option value="US">United States</option></select>
+<label for="kw">Keyword</label>
+<input id="kw">
+<button id="add">Add keyword</button>
+<label><input type="checkbox" id="indep"> Independent only</label>
+<button id="search">Search</button>
+<p>Results: <span id="count">-</span></p>
+<a id="export" href="#">Export</a>
+<script>
+  const kws = [];
+  add.onclick = () => { kws.push(kw.value); kw.value = ''; };
+  search.onclick = () => {
+    count.textContent = `${(1000 * kws.length + (indep.checked ? 234 : 0)).toLocaleString('en-US')} companies`;
+  };
+  document.getElementById('export').onclick = (e) => {
+    e.preventDefault();
+    const blob = new Blob([`region,keywords\n${region.value},${kws.join('|')}\n`], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'export.csv';
+    a.click();
+  };
+</script>

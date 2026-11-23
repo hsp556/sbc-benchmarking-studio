@@ -1,0 +1,11 @@
+[
+ ["fill","#analysisname","ZZ automation test"],
+ ["click","label[name='SkipTested']"],
+ ["fill","#CutOffDate","31/12"],
+ ["click","#analysisname"],
+ ["wait",1500],
+ ["eval","({name:document.querySelector('#analysisname').value, cut:document.querySelector('#CutOffDate').value, skip:document.querySelector('input[name=SkipTested]').checked})"],
+ ["click","input[type=submit].button.ok"],
+ ["wait",8000],
+ ["eval","({url:location.href, total:document.querySelector('#records-count')?.innerText, errors:[...document.querySelectorAll('.error, .field-validation-error, .validation-summary-errors')].filter(e=>e.offsetParent).map(e=>e.innerText.trim().slice(0,150))})"]
+]

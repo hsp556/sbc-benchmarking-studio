@@ -1,0 +1,40 @@
+LABEL: Global standard format
+ADDRESS: /SearchExpert/By/TPGlobalStandardFormat
+LANDED: https://tpcatalyst-r1.bvdinfo.com/202610-1/tpcatalyst/1/Companies/SearchExpert/By/TPGlobalStandardFormat
+
+<h4> Choices made
+<li> Variable: Non-current assets
+<li> Time period: Last available year
+<a class="cancel"> Cancel
+<a class="button ok disabled"> OK
+<li #tab-FinancialItem class=" "> Variable
+<li #tab-Financials class="selected "> Values
+<li #tab-TimePeriod class=" "> Time period
+<a> Non-current assets Edit
+<select #unit name="unit"> thousand | million | billion
+<select #currency name="currency"> AUD | CAD | CHF | DKK | EUR | GBP | JPY | NOK | NZD | SEK | USD
+<input #rb0 name="valueType" type="radio" class="radio"> Value
+<label class="radio" for="rb0"> Value
+<input name="minValue" type="text"> Minimum value
+<input name="maxValue" type="text"> Maximum value
+<select #topValue name="topValue">  | Top 5 | Top 10 | Top 25 | Top 50 | Top 100 | Top 250 | Top 500 | Upper quartile | Third quartile | Second quartile | Lower quartile | All
+<input #rb1 name="valueType" type="radio" class="radio"> GrowthRate
+<label class="radio" for="rb1"> Growth rate
+<input name="minGrowthRate" type="text"> Minimum growth rate
+<input name="maxGrowthRate" type="text"> Maximum growth rate
+<select #topGrowthRate name="topGrowthRate">  | Top 5 | Top 10 | Top 25 | Top 50 | Top 100 | Top 250 | Top 500 | Upper quartile | Third quartile | Second quartile | Lower quartile | All
+<input #rb2 name="valueType" type="radio" class="radio"> DecreasingRate
+<label class="radio" for="rb2"> Rate of decline
+<input name="minDecreasingRate" type="text"> Minimum decreasing rate
+<input name="maxDecreasingRate" type="text"> Maximum decreasing rate
+<select #topDecreasingRate name="topDecreasingRate">  | Top 5 | Top 10 | Top 25 | Top 50 | Top 100 | Top 250 | Top 500 | Upper quartile | Third quartile | Second quartile | Lower quartile | All
+<input #rb3 name="valueType" type="radio" class="radio"> PositiveTrend
+<label class="radio" for="rb3"> Companies with a
+<input #rb4 name="valuePositiveTrend" type="radio" class="radio"> Positive
+<label class="radio" for="rb4"> Positive trend
+<input #rb5 name="valuePositiveTrend" type="radio" class="radio"> Negative
+<label class="radio" for="rb5"> Negative trend
+<input #rb6 name="valueType" type="radio" class="radio"> NotNA
+<label class="radio" for="rb6"> All companies with a known value
+<input #checkbox-d978d3dbb38c4deb9272d6bf2c2d55b3 name="includeNas" type="checkbox" class="checkbox"> true
+<label name="includeNas" class="checkbox" for="checkbox-d978d3dbb38c4deb9272d6bf2c2d55b3"> Include n/a

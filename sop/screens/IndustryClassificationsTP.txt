@@ -1,0 +1,119 @@
+LABEL: Industry classifications
+ADDRESS: /SearchExpert/By/IndustryClassificationsTP
+LANDED: https://tpcatalyst-r1.bvdinfo.com/202610-1/tpcatalyst/1/Companies/SearchExpert/By/IndustryClassificationsTP
+
+<h4> Choices made
+<li> Code type: Primary codes only
+<a class="cancel"> Cancel
+<a class="button ok disabled"> OK
+<li #tab-Nace class="selected "> NACE Rev. 2
+<li #tab-UsSic class=" "> US SIC
+<li #tab-SICUK2007 class=" "> UK SIC
+<li #tab-Naics class=" "> NAICS 2022
+<li #tab-ANZSIC2006 class=" "> ANZSIC 2006
+<li #tab-ATECO2007 class=" "> ATECO 2007
+<li #tab-CNAE22 class=" "> CNAE 2009
+<li #tab-CSIC2011 class=" "> CSIC 2011
+<li #tab-NIC2008 class=" "> NIC 2008
+<li #tab-IDSIC class=" "> TB SIC
+<li #tab-KRSIC class=" "> KRSIC
+<li #tab-KZOKED class=" "> OKED-KZ
+<li #tab-NACEBEL2008 class=" "> NACEBEL 2008
+<li #tab-NAF2 class=" "> NAF Rev.2
+<li #tab-OKVED2014 class=" "> OKVED 2014
+<li #tab-PSIC2010 class=" "> PSIC
+<li #tab-SBI2008 class=" "> SBI 2008
+<li #tab-SNISE2007 class=" "> SNISE 2007
+<li #tab-SSIC2015 class=" "> SSIC2015
+<li #tab-TSEC2010 class=" "> TSEC 2010
+<li #tab-WZ2008 class=" "> WZ 2008
+<li #tab-CodeType class=" "> Code type
+<input name="freetext" type="search"> Search by name
+<li class="with-nodes with-selector" data-id="01"> 01 - Crop and animal production, hunting and related service activities
+<li class="with-nodes with-selector" data-id="02"> 02 - Forestry and logging
+<li class="with-nodes with-selector" data-id="03"> 03 - Fishing and aquaculture
+<li class="with-nodes with-selector" data-id="05"> 05 - Mining of coal and lignite
+<li class="with-nodes with-selector" data-id="06"> 06 - Extraction of crude petroleum and natural gas
+<li class="with-nodes with-selector" data-id="07"> 07 - Mining of metal ores
+<li class="with-nodes with-selector" data-id="08"> 08 - Other mining and quarrying
+<li class="with-nodes with-selector" data-id="09"> 09 - Mining support service activities
+<li class="with-nodes with-selector" data-id="10"> 10 - Manufacture of food products
+<li class="with-nodes with-selector" data-id="11"> 11 - Manufacture of beverages
+<li class="with-nodes with-selector" data-id="12"> 12 - Manufacture of tobacco products
+<li class="with-nodes with-selector" data-id="13"> 13 - Manufacture of textiles
+<li class="with-nodes with-selector" data-id="14"> 14 - Manufacture of wearing apparel
+<li class="with-nodes with-selector" data-id="15"> 15 - Manufacture of leather and related products
+<li class="with-nodes with-selector" data-id="16"> 16 - Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw 
+<li class="with-nodes with-selector" data-id="17"> 17 - Manufacture of paper and paper products
+<li class="with-nodes with-selector" data-id="18"> 18 - Printing and reproduction of recorded media
+<li class="with-nodes with-selector" data-id="19"> 19 - Manufacture of coke and refined petroleum products
+<li class="with-nodes with-selector" data-id="20"> 20 - Manufacture of chemicals and chemical products
+<li class="with-nodes with-selector" data-id="21"> 21 - Manufacture of basic pharmaceutical products and pharmaceutical preparations
+<li class="with-nodes with-selector" data-id="22"> 22 - Manufacture of rubber and plastic products
+<li class="with-nodes with-selector" data-id="23"> 23 - Manufacture of other non-metallic mineral products
+<li class="with-nodes with-selector" data-id="24"> 24 - Manufacture of basic metals
+<li class="with-nodes with-selector" data-id="25"> 25 - Manufacture of fabricated metal products, except machinery and equipment
+<li class="with-nodes with-selector" data-id="26"> 26 - Manufacture of computer, electronic and optical products
+<li class="with-nodes with-selector" data-id="27"> 27 - Manufacture of electrical equipment
+<li class="with-nodes with-selector" data-id="28"> 28 - Manufacture of machinery and equipment nec
+<li class="with-nodes with-selector" data-id="29"> 29 - Manufacture of motor vehicles, trailers and semi-trailers
+<li class="with-nodes with-selector" data-id="30"> 30 - Manufacture of other transport equipment
+<li class="with-nodes with-selector" data-id="31"> 31 - Manufacture of furniture
+<li class="with-nodes with-selector" data-id="32"> 32 - Other manufacturing
+<li class="with-nodes with-selector" data-id="33"> 33 - Repair and installation of machinery and equipment
+<li class="with-nodes with-selector" data-id="35"> 35 - Electricity, gas, steam and air conditioning supply
+<li class="with-nodes with-selector" data-id="36"> 36 - Water collection, treatment and supply
+<li class="with-nodes with-selector" data-id="37"> 37 - Sewerage
+<li class="with-nodes with-selector" data-id="38"> 38 - Waste collection, treatment and disposal activities; materials recovery
+<li class="with-nodes with-selector" data-id="39"> 39 - Remediation activities and other waste management services
+<li class="with-nodes with-selector" data-id="41"> 41 - Construction of buildings
+<li class="with-nodes with-selector" data-id="42"> 42 - Civil engineering
+<li class="with-nodes with-selector" data-id="43"> 43 - Specialised construction activities
+<li class="with-nodes with-selector" data-id="45"> 45 - Wholesale and retail trade and repair of motor vehicles and motorcycles
+<li class="with-nodes with-selector" data-id="46"> 46 - Wholesale trade, except of motor vehicles and motorcycles
+<li class="with-nodes with-selector" data-id="47"> 47 - Retail trade, except of motor vehicles and motorcycles
+<li class="with-nodes with-selector" data-id="49"> 49 - Land transport and transport via pipelines
+<li class="with-nodes with-selector" data-id="50"> 50 - Water transport
+<li class="with-nodes with-selector" data-id="51"> 51 - Air transport
+<li class="with-nodes with-selector" data-id="52"> 52 - Warehousing and support activities for transportation
+<li class="with-nodes with-selector" data-id="53"> 53 - Postal and courier activities
+<li class="with-nodes with-selector" data-id="55"> 55 - Accommodation
+<li class="with-nodes with-selector" data-id="56"> 56 - Food and beverage service activities
+<li class="with-nodes with-selector" data-id="58"> 58 - Publishing activities
+<li class="with-nodes with-selector" data-id="59"> 59 - Motion picture, video and television programme production, sound recording and music publishing activitie
+<li class="with-nodes with-selector" data-id="60"> 60 - Programming and broadcasting activities
+<li class="with-nodes with-selector" data-id="61"> 61 - Telecommunications
+<li class="with-nodes with-selector" data-id="62"> 62 - Computer programming, consultancy and related activities
+<li class="with-nodes with-selector" data-id="63"> 63 - Information service activities
+<li class="with-nodes with-selector" data-id="64"> 64 - Financial service activities, except insurance and pension funding
+<li class="with-nodes with-selector" data-id="65"> 65 - Insurance, reinsurance and pension funding, except compulsory social security
+<li class="with-nodes with-selector" data-id="66"> 66 - Activities auxiliary to financial services and insurance activities
+<li class="with-nodes with-selector" data-id="68"> 68 - Real estate activities
+<li class="with-nodes with-selector" data-id="69"> 69 - Legal and accounting activities
+<li class="with-nodes with-selector" data-id="70"> 70 - Activities of head offices; management consultancy activities
+<li class="with-nodes with-selector" data-id="71"> 71 - Architectural and engineering activities; technical testing and analysis
+<li class="with-nodes with-selector" data-id="72"> 72 - Scientific research and development
+<li class="with-nodes with-selector" data-id="73"> 73 - Advertising and market research
+<li class="with-nodes with-selector" data-id="74"> 74 - Other professional, scientific and technical activities
+<li class="with-nodes with-selector" data-id="75"> 75 - Veterinary activities
+<li class="with-nodes with-selector" data-id="77"> 77 - Rental and leasing activities
+<li class="with-nodes with-selector" data-id="78"> 78 - Employment activities
+<li class="with-nodes with-selector" data-id="79"> 79 - Travel agency, tour operator reservation service and related activities
+<li class="with-nodes with-selector" data-id="80"> 80 - Security and investigation activities
+<li class="with-nodes with-selector" data-id="81"> 81 - Services to buildings and landscape activities
+<li class="with-nodes with-selector" data-id="82"> 82 - Office administrative, office support and other business support activities
+<li class="with-nodes with-selector" data-id="84"> 84 - Public administration and defence; compulsory social security
+<li class="with-nodes with-selector" data-id="85"> 85 - Education
+<li class="with-nodes with-selector" data-id="86"> 86 - Human health activities
+<li class="with-nodes with-selector" data-id="87"> 87 - Residential care activities
+<li class="with-nodes with-selector" data-id="88"> 88 - Social work activities without accommodation
+<li class="with-nodes with-selector" data-id="90"> 90 - Creative, arts and entertainment activities
+<li class="with-nodes with-selector" data-id="91"> 91 - Libraries, archives, museums and other cultural activities
+<li class="with-nodes with-selector" data-id="92"> 92 - Gambling and betting activities
+<li class="with-nodes with-selector" data-id="93"> 93 - Sports activities and amusement and recreation activities
+<li class="with-nodes with-selector" data-id="94"> 94 - Activities of membership organisations
+<li class="with-nodes with-selector" data-id="95"> 95 - Repair of computers and personal and household goods
+<li class="with-nodes with-selector" data-id="96"> 96 - Other personal service activities
+<li class="with-nodes with-selector" data-id="97"> 97 - Activities of households as employers of domestic personnel
+<li class="with-nodes with-selector" data-id="98"> 98 - Undifferentiated goods- and services-producing activities of private households for own use
+<li class="with-nodes with-selector" data-id="99"> 99 - Activities of extraterritorial organisations and bodies

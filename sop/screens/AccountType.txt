@@ -1,0 +1,16 @@
+LABEL: Account type
+ADDRESS: /SearchExpert/By/AccountType
+LANDED: https://tpcatalyst-r1.bvdinfo.com/202610-1/tpcatalyst/1/Companies/SearchExpert/By/AccountType
+
+<h4> No choices made
+<a class="cancel"> Cancel
+<a class="button ok disabled"> OK
+<li #tab-AccountType class="selected "> Type of account
+<input #checkbox-5d01d9a4bbda495280a0607e5d19975d name="picklist" type="checkbox" class="checkbox"> C1Keys
+<label class="checkbox" for="checkbox-5d01d9a4bbda495280a0607e5d19975d"> Consolidated accounts with no unconsolidated companion (C1)
+<input #checkbox-9ca81e8efb9443b8a333d240803bfb7b name="picklist" type="checkbox" class="checkbox"> C2Keys
+<label class="checkbox" for="checkbox-9ca81e8efb9443b8a333d240803bfb7b"> Consolidated accounts with an unconsolidated companion (C2)
+<input #checkbox-efa9fe80797b457ebed97e558c856429 name="picklist" type="checkbox" class="checkbox"> U1Keys
+<label class="checkbox" for="checkbox-efa9fe80797b457ebed97e558c856429"> Unconsolidated accounts with no consolidated companion (U1)
+<input #checkbox-80b966713f724eb59721a3d389f6f002 name="picklist" type="checkbox" class="checkbox"> U2Keys
+<label class="checkbox" for="checkbox-80b966713f724eb59721a3d389f6f002"> Unconsolidated accounts with a consolidated companion (U2)

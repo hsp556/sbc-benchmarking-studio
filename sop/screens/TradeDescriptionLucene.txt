@@ -1,0 +1,14 @@
+LABEL: Activity text search
+ADDRESS: /SearchExpert/By/TradeDescriptionLucene
+LANDED: https://tpcatalyst-r1.bvdinfo.com/202610-1/tpcatalyst/1/Companies/SearchExpert/By/TradeDescriptionLucene
+
+<h4> Choices made
+<li> Search scope: Activity labels in national classifications (Primary codes), Trade description in any language, 
+<a class="cancel"> Cancel
+<a class="button ok disabled"> OK
+<li #tab-TermsBoolean class="selected "> Free text
+<li #tab-Scope class=" "> Search scope
+<textarea #text name="text"> Enter text here
+<a class="button ok"> Search
+<input #checkbox-ebcacebe210d473e954406fa83fe2c51 name="exactMatch" type="checkbox" class="checkbox"> true
+<label name="exactMatch" class="checkbox" for="checkbox-ebcacebe210d473e954406fa83fe2c51"> Exact match

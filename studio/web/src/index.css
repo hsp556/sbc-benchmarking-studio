@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Design tokens: warm paper, ink text, orange accent, frosted-glass panels. Light mode only.
+   Components use these names; raw colour values live in this file alone. */
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: Newsreader, Georgia, "Times New Roman", serif;
+  --font-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+
+  --color-ink: #14110D;
+  --color-body: #4A443C;
+  --color-muted: #6B645B;
+  --color-bg: #FAF7F2;
+  --color-panel: #FFFFFF;
+  --color-line: #E1DAD0;
+  --color-soft: #F6F0E7;
+  --color-accent: #F97316;        /* fills and marks; never small text on a light background */
+  --color-accent-strong: #C2410C; /* accent text and hover fills (5:1 on paper) */
+  --color-accent-soft: #FDEBDC;
+  --color-ok: #1E7B4E;
+  --color-okbg: #E6F4EC;
+  --color-warn: #8A5700;
+  --color-warnbg: #FFF1D6;
+  --color-bad: #B3261E;
+  --color-badbg: #FDECEA;
+}
+
+body {
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  background:
+    radial-gradient(60% 50% at 85% 0%, rgb(249 115 22 / 0.13), transparent 70%),
+    radial-gradient(50% 45% at 0% 100%, rgb(253 186 116 / 0.22), transparent 70%),
+    var(--color-bg);
+  background-attachment: fixed;
+}
+
+/* Frosted panel: translucent white over the page glow, light edge, soft lift. */
+.glass {
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.86), rgb(255 255 255 / 0.5));
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border: 1px solid rgb(255 255 255 / 0.85);
+  box-shadow: 0 1px 2px rgb(20 17 13 / 0.06), 0 18px 40px -24px rgb(20 17 13 / 0.28);
+}
+.glass-bar {
+  background: rgb(250 247 242 / 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgb(20 17 13 / 0.1);
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Planning animation: a slowly turning glow, a pulsing marker and shimmering placeholders. */
+.plan-orb {
+  width: 4rem; height: 4rem; border-radius: 9999px;
+  background: conic-gradient(from 0deg, #FDBA74, var(--color-accent), var(--color-accent-strong), #FDBA74);
+  box-shadow: 0 0 0 6px rgb(255 255 255 / 0.7), 0 10px 30px -6px rgb(249 115 22 / 0.55);
+  animation: plan-spin 2.4s linear infinite;
+  -webkit-mask: radial-gradient(circle, transparent 42%, #000 44%);
+  mask: radial-gradient(circle, transparent 42%, #000 44%);
+}
+.plan-pulse { animation: plan-pulse 1.2s ease-in-out infinite; }
+.plan-shimmer {
+  background: linear-gradient(100deg, rgb(20 17 13 / 0.05) 20%, rgb(249 115 22 / 0.18) 50%, rgb(20 17 13 / 0.05) 80%);
+  background-size: 220% 100%;
+  animation: plan-shimmer 1.6s ease-in-out infinite;
+}
+@keyframes plan-spin { to { transform: rotate(360deg); } }
+@keyframes plan-pulse { 0%, 100% { transform: scale(0.7); opacity: 0.6; } 50% { transform: scale(1); opacity: 1; } }
+@keyframes plan-shimmer { from { background-position: 120% 0; } to { background-position: -100% 0; } }
+
+:focus-visible { outline: 2px solid var(--color-accent-strong); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

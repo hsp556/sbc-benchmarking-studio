@@ -1,0 +1,32 @@
+LABEL: BvD independence indicator
+ADDRESS: /SearchExpert/By/IndependenceIndicator
+LANDED: https://tpcatalyst-r1.bvdinfo.com/202610-1/tpcatalyst/1/Companies/SearchExpert/By/IndependenceIndicator
+
+<h4> Choices made: 616,194 companies selected
+<li> Independence Indicator: A All
+<li> Time period: Current independence indicator
+<a class="cancel"> Cancel
+<a class="button ok"> OK
+<li #tab-IndependenceIndicator class="selected "> Independence Indicator
+<li #tab-TimePeriod class=" "> Time period
+<input #checkbox-ffbd63a38d104e1f85e849bb0ddd6eca type="checkbox" class="select-all checkbox"> on
+<label class="checkbox" for="checkbox-ffbd63a38d104e1f85e849bb0ddd6eca"> Select all
+<input #checkbox-bab032a186824c33a36187b28ced79d5 name="values" type="checkbox" class="checkbox"> a
+<label class="checkbox" for="checkbox-bab032a186824c33a36187b28ced79d5"> A
+<select #confidencea name="confidencea"> All | High | Medium | Low
+<input #checkbox-fc848251641e45c7bb8fd6215dd41ee1 name="values" type="checkbox" class="checkbox"> b
+<label class="checkbox" for="checkbox-fc848251641e45c7bb8fd6215dd41ee1"> B
+<select #confidenceb name="confidenceb"> All | High | Medium | Low
+<input #checkbox-6676d07a2c4246feb23012e5e4fd1889 name="values" type="checkbox" class="checkbox"> c
+<label class="checkbox" for="checkbox-6676d07a2c4246feb23012e5e4fd1889"> C
+<select #confidencec name="confidencec"> All | High | Medium
+<input #checkbox-c9ab953f28804e1d8ce718453d8e8b84 name="values" type="checkbox" class="checkbox"> DKey
+<label class="checkbox" for="checkbox-c9ab953f28804e1d8ce718453d8e8b84"> D
+<input #checkbox-1be5877a20b84300b56dcb67361bc229 name="values" type="checkbox" class="checkbox"> UKey
+<label class="checkbox" for="checkbox-1be5877a20b84300b56dcb67361bc229"> U
+<input #checkbox-39130d6bbe5044ed827142a4f7d7c4ba name="listed" type="checkbox" class="checkbox"> ListedKey
+<label class="checkbox" for="checkbox-39130d6bbe5044ed827142a4f7d7c4ba"> Add all publicly listed companies
+<input #checkbox-60e74bcb02c840eaa6df299c5d9d4d28 name="individual" type="checkbox" class="checkbox"> EmployeesOrFamiliesOrIndividualsKey
+<label class="checkbox" for="checkbox-60e74bcb02c840eaa6df299c5d9d4d28"> Add companies for which all shareholders or all shareholders with a stake greater than 25% are individuals or 
+<input #checkbox-b2a7fae05e864beea83731b7b8f26449 name="branches" type="checkbox" class="checkbox"> BranchLocationKey
+<label class="checkbox" for="checkbox-b2a7fae05e864beea83731b7b8f26449"> Add branches

@@ -1,0 +1,19 @@
+{
+  "name": "catalyst-runner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SBC Benchmarking Studio: planned, reviewed and automated TP Catalyst searches.",
+  "scripts": {
+    "chrome": "powershell -ExecutionPolicy Bypass -File start-chrome.ps1",
+    "run": "node run.mjs",
+    "test": "node test/run-mock.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.9.0",
+    "@fastify/static": "^10.1.11",
+    "fastify": "^5.12.8",
+    "playwright-core": "^1.50.0",
+    "zod": "^4.6.7"
+  }
+}

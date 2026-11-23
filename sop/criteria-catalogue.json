@@ -1,0 +1,528 @@
+{
+ "Favourite": [
+  {
+   "label": "Account type: Type of account",
+   "href": "AccountType?view=AccountType"
+  },
+  {
+   "label": "Key financials & employees: Operating revenue (Turnover) (All templates)",
+   "href": "TPKeyFinancials?line=KEY_FINANCIALS%2AKEY_FINANCIALS.OPRE%3AUNIVERSAL"
+  },
+  {
+   "label": "All companies with",
+   "href": "TPAllCompaniesWith"
+  },
+  {
+   "label": "Status: Status",
+   "href": "Status?view=Status"
+  },
+  {
+   "label": "BvD independence indicator",
+   "href": "IndependenceIndicator"
+  },
+  {
+   "label": "Industry classifications: NACE Rev. 2",
+   "href": "IndustryClassificationsTP?view=Nace"
+  },
+  {
+   "label": "Industry classifications: US SIC",
+   "href": "IndustryClassificationsTP?view=UsSic"
+  },
+  {
+   "label": "Global standard format: Operating profit (loss) [EBIT] (Corporate)",
+   "href": "TPGlobalStandardFormat?line=PROFIT_LOSS_ACCOUNT%2APROFIT_LOSS_ACCOUNT.OPPL%3AIND"
+  },
+  {
+   "label": "Company name",
+   "href": "CompanyName"
+  },
+  {
+   "label": "BvD ID number: BvD ID number",
+   "href": "BvDIdTP?view=BvDId"
+  },
+  {
+   "label": "Activity text search",
+   "href": "TradeDescriptionLucene"
+  },
+  {
+   "label": "World region, country or region in country: World region, country & subdivisions",
+   "href": "CountryRegion?view=CountryRegion"
+  }
+ ],
+ "{Name}": [
+  {
+   "label": "Company name",
+   "href": "CompanyName"
+  },
+  {
+   "label": "Status",
+   "href": "Status"
+  },
+  {
+   "label": "Standardized legal form",
+   "href": "StandardisedLegalForm"
+  },
+  {
+   "label": "National legal form",
+   "href": "NationalLegalForm"
+  },
+  {
+   "label": "Number of employees",
+   "href": "NumberOfEmployees"
+  },
+  {
+   "label": "Telephone and fax number",
+   "href": "Phone"
+  },
+  {
+   "label": "Website, domain or e-mail",
+   "href": "WebsiteDomainEmail"
+  },
+  {
+   "label": "Year of incorporation",
+   "href": "YearOfIncorporation"
+  },
+  {
+   "label": "Size classification",
+   "href": "CompanyCategory"
+  },
+  {
+   "label": "All companies with",
+   "href": "TPAllCompaniesWith"
+  }
+ ],
+ "AllCompanies": [
+  {
+   "label": "Company name",
+   "href": "CompanyName"
+  },
+  {
+   "label": "Status",
+   "href": "Status"
+  },
+  {
+   "label": "Standardized legal form",
+   "href": "StandardisedLegalForm"
+  },
+  {
+   "label": "National legal form",
+   "href": "NationalLegalForm"
+  },
+  {
+   "label": "Number of employees",
+   "href": "NumberOfEmployees"
+  },
+  {
+   "label": "Telephone and fax number",
+   "href": "Phone"
+  },
+  {
+   "label": "Website, domain or e-mail",
+   "href": "WebsiteDomainEmail"
+  },
+  {
+   "label": "Year of incorporation",
+   "href": "YearOfIncorporation"
+  },
+  {
+   "label": "Size classification",
+   "href": "CompanyCategory"
+  },
+  {
+   "label": "All companies with",
+   "href": "TPAllCompaniesWith"
+  }
+ ],
+ "AllCompaniesWithWomen": [
+  {
+   "label": "Company name",
+   "href": "CompanyName"
+  },
+  {
+   "label": "Status",
+   "href": "Status"
+  },
+  {
+   "label": "Standardized legal form",
+   "href": "StandardisedLegalForm"
+  },
+  {
+   "label": "National legal form",
+   "href": "NationalLegalForm"
+  },
+  {
+   "label": "Number of employees",
+   "href": "NumberOfEmployees"
+  },
+  {
+   "label": "Telephone and fax number",
+   "href": "Phone"
+  },
+  {
+   "label": "Website, domain or e-mail",
+   "href": "WebsiteDomainEmail"
+  },
+  {
+   "label": "Year of incorporation",
+   "href": "YearOfIncorporation"
+  },
+  {
+   "label": "Size classification",
+   "href": "CompanyCategory"
+  },
+  {
+   "label": "All companies with",
+   "href": "TPAllCompaniesWith"
+  }
+ ],
+ "AllCompaniesWithEthnicMinorities": [
+  {
+   "label": "Company name",
+   "href": "CompanyName"
+  },
+  {
+   "label": "Status",
+   "href": "Status"
+  },
+  {
+   "label": "Standardized legal form",
+   "href": "StandardisedLegalForm"
+  },
+  {
+   "label": "National legal form",
+   "href": "NationalLegalForm"
+  },
+  {
+   "label": "Number of employees",
+   "href": "NumberOfEmployees"
+  },
+  {
+   "label": "Telephone and fax number",
+   "href": "Phone"
+  },
+  {
+   "label": "Website, domain or e-mail",
+   "href": "WebsiteDomainEmail"
+  },
+  {
+   "label": "Year of incorporation",
+   "href": "YearOfIncorporation"
+  },
+  {
+   "label": "Size classification",
+   "href": "CompanyCategory"
+  },
+  {
+   "label": "All companies with",
+   "href": "TPAllCompaniesWith"
+  }
+ ],
+ "Identifiers": [
+  {
+   "label": "BvD ID number",
+   "href": "BvDIdTP"
+  },
+  {
+   "label": "Orbis ID",
+   "href": "BvD9"
+  },
+  {
+   "label": "Stock and securities number",
+   "href": "StockNumbers"
+  }
+ ],
+ "Location": [
+  {
+   "label": "World region, country or region in country",
+   "href": "CountryRegion"
+  },
+  {
+   "label": "NUTS classification",
+   "href": "NUTSClassification"
+  },
+  {
+   "label": "City",
+   "href": "City"
+  },
+  {
+   "label": "Postcode",
+   "href": "Postcode"
+  },
+  {
+   "label": "Street address",
+   "href": "StreetAddress"
+  },
+  {
+   "label": "US Metropolitan Statistical Areas",
+   "href": "MetropolitanStatisticalArea"
+  }
+ ],
+ "Activities and industry": [
+  {
+   "label": "Industry classifications",
+   "href": "IndustryClassificationsTP"
+  },
+  {
+   "label": "Entity type",
+   "href": "EntityType"
+  },
+  {
+   "label": "Activity text search",
+   "href": "TradeDescriptionLucene"
+  },
+  {
+   "label": "BvD sectors",
+   "href": "MajorSectors"
+  }
+ ],
+ "AllGlobalSIFIs": [
+  {
+   "label": "Industry classifications",
+   "href": "IndustryClassificationsTP"
+  },
+  {
+   "label": "Entity type",
+   "href": "EntityType"
+  },
+  {
+   "label": "Activity text search",
+   "href": "TradeDescriptionLucene"
+  },
+  {
+   "label": "BvD sectors",
+   "href": "MajorSectors"
+  }
+ ],
+ "Financials": [
+  {
+   "label": "Key financials & employees",
+   "href": "TPKeyFinancials"
+  },
+  {
+   "label": "Global detailed",
+   "href": "TPGlobalDetailed"
+  },
+  {
+   "label": "Global standard format",
+   "href": "TPGlobalStandardFormat"
+  },
+  {
+   "label": "TP specific ratios",
+   "href": "TPSpecificRatios"
+  },
+  {
+   "label": "TP Profit Level Indicators",
+   "href": "TPPLIGlobal"
+  },
+  {
+   "label": "Global ratios",
+   "href": "TPGlobalRatios"
+  },
+  {
+   "label": "Account type",
+   "href": "AccountType"
+  },
+  {
+   "label": "Accounting practice",
+   "href": "AccountingPractice"
+  },
+  {
+   "label": "Available accounts",
+   "href": "AvailableAccounts"
+  }
+ ],
+ "AllCompaniesWithPreliminaryAccounts": [
+  {
+   "label": "Key financials & employees",
+   "href": "TPKeyFinancials"
+  },
+  {
+   "label": "Global detailed",
+   "href": "TPGlobalDetailed"
+  },
+  {
+   "label": "Global standard format",
+   "href": "TPGlobalStandardFormat"
+  },
+  {
+   "label": "TP specific ratios",
+   "href": "TPSpecificRatios"
+  },
+  {
+   "label": "TP Profit Level Indicators",
+   "href": "TPPLIGlobal"
+  },
+  {
+   "label": "Global ratios",
+   "href": "TPGlobalRatios"
+  },
+  {
+   "label": "Account type",
+   "href": "AccountType"
+  },
+  {
+   "label": "Accounting practice",
+   "href": "AccountingPractice"
+  },
+  {
+   "label": "Available accounts",
+   "href": "AvailableAccounts"
+  }
+ ],
+ "Directors, managers and advisors": [
+  {
+   "label": "Directors and managers",
+   "href": "Directors"
+  },
+  {
+   "label": "Auditors, bankers and other advisors",
+   "href": "ContactAdvisorName"
+  }
+ ],
+ "Ownership": [
+  {
+   "label": "BvD independence indicator",
+   "href": "IndependenceIndicator"
+  },
+  {
+   "label": "Ultimate Owners",
+   "href": "AllUltimateOwners"
+  },
+  {
+   "label": "Ultimate Owners (by name)",
+   "href": "UltimateOwnersName"
+  }
+ ],
+ "Ultimate Owners with": [
+  {
+   "label": "Subsidiaries (by profile)",
+   "href": "UltimateOwnersWithSubsidiariesByProfile"
+  }
+ ],
+ "Shareholders with": [
+  {
+   "label": "Subsidiaries (by profile)",
+   "href": "ShareholdersWithSubsidiariesByProfile"
+  },
+  {
+   "label": "Subsidiaries (by name)",
+   "href": "ShareholdersWithSubsidiariesName"
+  },
+  {
+   "label": "Foreign subsidiaries",
+   "href": "ShareholdersWithForeignSubsidiaries"
+  },
+  {
+   "label": "Specific number of subsidiaries",
+   "href": "SpecificNumberOfSubsidiaries"
+  }
+ ],
+ "Subsidiaries with": [
+  {
+   "label": "Shareholders (by profile)",
+   "href": "SubsidiariesWithShareholdersByProfile"
+  },
+  {
+   "label": "Shareholders (by name)",
+   "href": "SubsidiariesWithShareholdersByName"
+  },
+  {
+   "label": "Ultimate Owners (by profile)",
+   "href": "SubsidiariesWithUltimateOwnersByProfile"
+  },
+  {
+   "label": "Foreign shareholders",
+   "href": "SubsidiariesWithForeignShareholders"
+  },
+  {
+   "label": "Shareholder also manager",
+   "href": "SubsidiariesWithManagingShareholders"
+  },
+  {
+   "label": "Specific number of shareholders",
+   "href": "SpecificNumberOfShareholders"
+  }
+ ],
+ "Branches and headquarters": [
+  {
+   "label": "Branches",
+   "href": "Branches"
+  },
+  {
+   "label": "Headquarters",
+   "href": "Headquarters"
+  }
+ ],
+ "Affiliates": [
+  {
+   "label": "Add corporate group",
+   "href": "OwnershipCorporateGroup"
+  },
+  {
+   "label": "Replace by shareholders",
+   "href": "OwnershipAddShareholders"
+  },
+  {
+   "label": "Replace by subsidiaries",
+   "href": "OwnershipAddSubsidiaries"
+  },
+  {
+   "label": "Remove subsidiaries",
+   "href": "OwnershipExcludeSubsidiaries"
+  }
+ ],
+ "Stock data": [
+  {
+   "label": "Listed/Unlisted",
+   "href": "ListingStatus"
+  },
+  {
+   "label": "Indexes",
+   "href": "StockIndexes"
+  }
+ ],
+ "Notes and custom data": [
+  {
+   "label": "My notes",
+   "href": "WordsWithinNotes"
+  },
+  {
+   "label": "My variables",
+   "href": "CustomVariables"
+  },
+  {
+   "label": "My own companies",
+   "href": "OwnCompanies"
+  }
+ ],
+ "AllRecordsWithNotes": [
+  {
+   "label": "My notes",
+   "href": "WordsWithinNotes"
+  },
+  {
+   "label": "My variables",
+   "href": "CustomVariables"
+  },
+  {
+   "label": "My own companies",
+   "href": "OwnCompanies"
+  }
+ ],
+ "AllCompaniesWithOwnData": [
+  {
+   "label": "My notes",
+   "href": "WordsWithinNotes"
+  },
+  {
+   "label": "My variables",
+   "href": "CustomVariables"
+  },
+  {
+   "label": "My own companies",
+   "href": "OwnCompanies"
+  }
+ ],
+ "Royalty agreements": [],
+ "AllCompaniesWithRoyaltyAgreements": []
+}

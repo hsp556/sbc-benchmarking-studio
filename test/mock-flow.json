@@ -1,0 +1,16 @@
+{
+  "urlMatch": "mock.html",
+  "timeoutMs": 5000,
+  "steps": [
+    { "name": "Confirm operator", "action": "pause", "message": "Operator {{operator}} confirms the session is theirs." },
+    { "name": "Region", "action": "select", "selector": "#region", "value": "{{region}}" },
+    { "name": "Keywords", "action": "forEach", "param": "keywords", "steps": [
+      { "name": "Type {{item}}", "action": "fill", "selector": "#kw", "value": "{{item}}", "screenshot": false },
+      { "name": "Add {{item}}", "action": "click", "selector": "#add" }
+    ] },
+    { "name": "Independent only", "action": "check", "selector": "#indep" },
+    { "name": "Search", "action": "click", "selector": "role=button[name=\"Search\"]" },
+    { "name": "Result count", "action": "count", "selector": "#count" },
+    { "name": "Export", "action": "download", "selector": "#export", "saveAs": "{{job}}-dump.csv" }
+  ]
+}

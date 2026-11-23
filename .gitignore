@@ -1,0 +1,16 @@
+node_modules/
+chrome-profile/
+runs/
+jobs/
+local.env*
+.env*
+studio/data/
+office.env
+*.log
+studio/web/dist/
+# Licensed database material and the team's past searches stay on this PC (not sent to GitHub)
+sop/past-searches.json
+sop/prowess-product-groups.json
+sop/screens/**/*.png
+sop/screens/**/*.jpg
+explore/*.png

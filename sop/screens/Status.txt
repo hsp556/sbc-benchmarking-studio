@@ -1,0 +1,12 @@
+LABEL: Status
+ADDRESS: /SearchExpert/By/Status
+LANDED: https://tpcatalyst-r1.bvdinfo.com/202610-1/tpcatalyst/1/Companies/SearchExpert/By/Status
+
+<h4> No choices made
+<a class="cancel"> Cancel
+<a class="button ok disabled"> OK
+<li #tab-Status class="selected "> Status
+<li #tab-ChangeDate class=" "> Change date
+<li class="with-nodes with-selector" data-id="ActiveRootKeys"> Active companies
+<li class="with-nodes with-selector" data-id="InactiveRootKeys"> Inactive companies
+<li class="with-selector" data-id="UnknownSituationKeys"> Unknown situation
