@@ -10,7 +10,7 @@ model, reviewed by a person, and built in a logged-in Chrome window by a runner.
 company count and exports to Excel only after a named approval; Prowess pulls the data in one confirmed run and
 saves two CSVs for TAIGA (the firm's analysis tool), which does the filtering.
 
-Not a git repository. Windows, PowerShell, Node 25 (ES modules, no build step outside `studio/web`), Python 3.12
+Git repository, private: github.com/hsp556/sbc-benchmarking-studio (branch main; `gh auth switch -u hsp556`). `.gitignore` keeps keys, run output, database screenshots, `sop/past-searches.json` and `sop/prowess-product-groups.json` off GitHub (licensed or team material: the planner needs both JSON files, so copy them by hand to a new PC). Windows, PowerShell, Node 25 (ES modules, no build step outside `studio/web`), Python 3.12
 for the Excel helpers. Agreed build order: this PC end to end → office PCs → AWS → runners for ACE and
 Capitaline (Prowess was brought forward and is built) → self-learning research agents last.
 
