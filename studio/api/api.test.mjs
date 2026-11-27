@@ -142,3 +142,49 @@ test('password: the website and API ask for it; health stays open; runner paths 
     assert.ok((await beat({ authorization: 'Bearer token-token-token-token-1' })).status < 300);
   } finally { await guarded.close(); }
 });
+
+test('base path: the Studio answers under BASE_PATH, the password and token still guard it, the site page falls back', async () => {
+  const web = fs.mkdtempSync(path.join(dir, 'web-'));
+  fs.writeFileSync(path.join(web, 'index.html'), '<p>studio page</p>');
+  const hosted = build({ dbFile: path.join(dir, 'hosted.db'), plan: async () => ({}), similar: () => [], webDir: web, basePath: '/benchmarkingStudio/', password: 'open-sesame-1', runnerToken: 'token-token-token-token-1' });
+  const at = await hosted.listen({ port: 0, host: '127.0.0.1' });
+  try {
+    const basic = { authorization: 'Basic ' + Buffer.from('anyone:open-sesame-1').toString('base64') };
+    assert.equal((await fetch(at + '/benchmarkingStudio/api/health')).status, 200);
+    assert.equal((await fetch(at + '/benchmarkingStudio/api/jobs')).status, 401);
+    const jobs = await fetch(at + '/benchmarkingStudio/api/jobs?limit=5', { headers: basic });
+    assert.equal(jobs.status, 200);
+    assert.deepEqual((await jobs.json()).items, []);
+    for (const page of ['/benchmarkingStudio', '/benchmarkingStudio/', '/benchmarkingStudio/anything']) {
+      const r = await fetch(at + page, { headers: basic });
+      assert.equal(r.status, 200, page);
+      assert.match(await r.text(), /studio page/, page);
+    }
+    assert.equal((await fetch(at + '/benchmarkingStudio/api/nothing', { headers: basic })).status, 404);
+    const beat = (headers) => fetch(at + '/benchmarkingStudio/api/runner/heartbeat', { method: 'POST', headers: { 'content-type': 'application/json', ...headers }, body: JSON.stringify({ name: 'r', agent: 'catalyst', state: 'idle' }) });
+    assert.equal((await beat(basic)).status, 401);
+    assert.ok((await beat({ authorization: 'Bearer token-token-token-token-1' })).status < 300);
+    // a look-alike prefix is not the Studio's path
+    assert.equal((await fetch(at + '/benchmarkingStudioX/api/health')).status, 401);
+  } finally { await hosted.close(); }
+});
+
+test('exports on the runner: the Studio refuses export files with 410', async () => {
+  const hosted = build({ dbFile: path.join(dir, 'runner-files.db'), plan: async () => ({}), similar: () => [], exportsOnRunner: true });
+  const at = await hosted.listen({ port: 0, host: '127.0.0.1' });
+  try {
+    const post = (url, body, headers = { 'content-type': 'application/json' }) => fetch(at + url, { method: 'POST', headers, body });
+    const job = await (await post('/api/jobs', JSON.stringify({ agent: 'catalyst', brief: 'manufacture of paints, MENA, FY 2025', spec, createdBy: 'tester' }))).json();
+    await post('/api/runner/claim', JSON.stringify({ runner: 'r', agent: 'catalyst' }));
+    await post(`/api/runner/jobs/${job.id}/finish`, JSON.stringify({ status: 'done', total: 12 }));
+    await post(`/api/jobs/${job.id}/export`, JSON.stringify({ approvedBy: 'Approver', view: '2025', confirmCredits: true }));
+    const claimed = await (await post('/api/runner/claim', JSON.stringify({ runner: 'r', agent: 'catalyst' }))).json();
+    assert.equal(claimed.task, 'export');
+    const up = await post(`/api/runner/jobs/${job.id}/file`, Buffer.from('xlsx'), { 'content-type': 'application/octet-stream', 'x-file-name': 'a.xlsx' });
+    assert.equal(up.status, 410);
+    assert.equal((await up.json()).code, 'exports_stay_on_runner');
+    const done = await (await post(`/api/runner/jobs/${job.id}/export-finish`, JSON.stringify({ status: 'done' }))).json();
+    assert.equal(done.export_state, 'done');
+    assert.equal(done.export_file, null);
+  } finally { await hosted.close(); }
+});

@@ -100,7 +100,9 @@ async function runJob(job) {
     let error = ok ? null : why;
     if (ok) { // hand the file to the Studio; a copy stays in this PC's runs folder
       const up = await fetch(`${STUDIO}/api/runner/jobs/${job.id}/file`, { method: 'POST', headers: { ...AUTH, 'content-type': 'application/octet-stream', 'x-file-name': path.basename(end.file) }, body: fs.readFileSync(end.file) });
-      if (!up.ok) error = `The file was exported to ${end.file} on the runner PC but could not be uploaded to the Studio (${up.status})`;
+      if (up.status === 410) { // a Studio that keeps no files (the hosted one): the file stays here and its place is reported
+        await post(`/api/runner/jobs/${job.id}/steps`, { kind: 'files', text: `Kept on the runner PC (${NAME}): ${end.file}`.slice(0, 2000) }).catch((err) => say(`could not report a step: ${err.message}`));
+      } else if (!up.ok) error = `The file was exported to ${end.file} on the runner PC but could not be uploaded to the Studio (${up.status})`;
     }
     const shared = ok ? saveToSharePoint(end.file) : {};
     if (shared.sharedPath) say(`saved to SharePoint folder: ${shared.sharedPath}`);

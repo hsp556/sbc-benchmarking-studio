@@ -24,12 +24,15 @@ function ExportCard({ job, onChange }: { job: Job; onChange: (j: Job) => void })
       <div className="grid gap-4">
         {job.export_state === 'done' && (
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-white/60 p-3 ring-1 ring-line">
-            <p className="text-sm"><span className="font-medium">{job.export_file}</span>
+            <p className="text-sm"><span className="font-medium">{job.export_file ?? 'Exported'}</span>
               <span className="block text-muted">Approved by {job.approved_by} · {when(job.approved_at ?? null)}
                 {job.credits_before != null ? ` · credit balance before ${job.credits_before}` : ''}{job.credits_after != null ? `, after the display charge ${job.credits_after}` : ''}</span></p>
-            <a href={`api/jobs/${job.id}/file`} className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-ink px-6 font-medium text-white transition-colors duration-150 hover:bg-accent-strong">
-              <Download className="size-4" aria-hidden />Download Excel</a>
+            {job.export_file && <a href={`api/jobs/${job.id}/file`} className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-ink px-6 font-medium text-white transition-colors duration-150 hover:bg-accent-strong">
+              <Download className="size-4" aria-hidden />Download Excel</a>}
           </div>
+        )}
+        {job.export_state === 'done' && !job.export_file && (
+          <Notice kind="info">The Excel file stays on the runner PC{job.runner ? ` (${job.runner})` : ''}. Its folder is in the last step of the progress list.</Notice>
         )}
         {job.shared_path && !waiting && <Notice kind="info">Saved to SharePoint: <span className="break-all font-medium">{job.shared_path}</span></Notice>}
         {job.shared_error && !waiting && <Notice kind="warn">{job.shared_error}. The file is still available{job.export_state === 'done' ? ' from the download button' : ' on the runner PC'}.</Notice>}

@@ -30,10 +30,18 @@ const Approve = z.object({ approvedBy: z.string().min(2).max(80), view: z.string
 const ExportDone = z.object({ status: z.enum(['done', 'failed']), error: z.string().max(2000).optional(), creditsBefore: z.number().int().min(0).nullish(), creditsAfter: z.number().int().min(0).nullish(), sharedPath: z.string().max(500).optional(), sharedError: z.string().max(500).optional() });
 const Beat = z.object({ name: z.string().min(1).max(80), agent: Agent, state: z.enum(['idle', 'busy', 'logged_out', 'no_browser']), detail: z.string().max(300).optional() });
 
-export function build({ dbFile, plan = planBrief, similar = similarPast, webDir, runnerToken = process.env.RUNNER_TOKEN, password = process.env.STUDIO_PASSWORD }) {
+// basePath: the Studio served under a path on a shared site (BASE_PATH=/benchmarkingStudio on tpdocgenai.com). The
+//   prefix is taken off every request, so routes and the auth check are the same as on a PC. The website must be
+//   built with the same BASE_PATH.
+// exportsOnRunner: the Studio accepts no export files and the Excel stays on the runner PC (EXPORTS_ON_RUNNER=1, set on
+//   the hosted Studio: TP Catalyst data is not loaded onto the cloud server).
+export function build({ dbFile, plan = planBrief, similar = similarPast, webDir, runnerToken = process.env.RUNNER_TOKEN, password = process.env.STUDIO_PASSWORD,
+  basePath = process.env.BASE_PATH, exportsOnRunner = process.env.EXPORTS_ON_RUNNER === '1' }) {
   const exportsDir = path.join(path.dirname(dbFile), 'exports'); // export files uploaded by runners
+  const base = (basePath ?? '').replace(/\/+$/, '');
+  const rewriteUrl = base ? (req) => (req.url === base || req.url.startsWith(`${base}/`) || req.url.startsWith(`${base}?`) ? req.url.slice(base.length) || '/' : req.url).replace(/^\?/, '/?') : undefined;
   // forceCloseConnections: shutdown must not wait for browsers' idle keep-alive or open progress streams
-  const app = Fastify({ logger: { level: process.env.LOG_LEVEL ?? 'info' }, forceCloseConnections: true });
+  const app = Fastify({ logger: { level: process.env.LOG_LEVEL ?? 'info' }, forceCloseConnections: true, ...(rewriteUrl && { rewriteUrl }) });
   const store = openStore(dbFile);
   const bus = new EventEmitter().setMaxListeners(0); // live progress, keyed by job id
   app.addHook('onClose', () => store.close());
@@ -187,6 +195,7 @@ export function build({ dbFile, plan = planBrief, similar = similarPast, webDir,
   app.post('/api/runner/jobs/:id/file', (req, reply) => {
     const job = runningJob(req, reply);
     if (!job) return;
+    if (exportsOnRunner) return fail(reply, 410, 'exports_stay_on_runner', 'This Studio keeps no export files: the file stays on the runner PC');
     if (job.export_state !== 'running' || !Buffer.isBuffer(req.body) || !req.body.length) return fail(reply, 422, 'invalid_request', 'Expected the export file as application/octet-stream');
     const name = `${String(req.headers['x-file-name'] ?? 'export').replace(/[^\w .()-]/g, '').replace(/\.xlsx$/i, '').slice(0, 120) || 'export'}.xlsx`;
     fs.mkdirSync(exportsDir, { recursive: true });

@@ -161,8 +161,9 @@ website (studio/web) ──► Studio API (studio/api) ◄── runner (runner/
   overwriting, and reports `shared_path` / `shared_error` (tested with a stand-in folder, not yet with a real one).
   No Microsoft keys are held; an API upload (Graph) is only for the AWS stage.
   User decision, 19 Nov 2026: SharePoint will be connected at the AWS stage only (Graph, app registration with
-  `Sites.Selected`). Do not set up or ask for the synced folder before then; `SHAREPOINT_DIR` stays empty and
-  exports stay in `runs/` and `studio/data/exports/`.
+  `Sites.Selected`). User decision, 27 Nov 2026 (AWS stage): the hosted Studio keeps no export files
+  (`EXPORTS_ON_RUNNER=1`); the runner PC syncs a SharePoint folder with OneDrive and sets `SHAREPOINT_DIR`, so the
+  comparables reach the team through SharePoint, never through AWS. A Graph upload may replace the synced folder later.
 - **Nothing is fixed to the demo video.** Filters vary per job.
 
 ## User decisions

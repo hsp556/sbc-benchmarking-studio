@@ -1,0 +1,15 @@
+node_modules
+**/node_modules
+studio/web/dist
+studio/data
+runs
+jobs
+chrome-profile
+local.env*
+office.env
+.env*
+*.log
+.git
+explore
+test
+sop/screens

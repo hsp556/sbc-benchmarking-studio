@@ -1,0 +1,9 @@
+{
+  "name": "benchmarking-studio-deploy",
+  "private": true,
+  "type": "module",
+  "description": "Hosts the Studio at https://www.tpdocgenai.com/benchmarkingStudio on TAIGA's load balancer (AWS CDK).",
+  "scripts": { "diff": "cdk diff", "deploy": "cdk deploy" },
+  "dependencies": { "aws-cdk-lib": "^2.220.0", "constructs": "^10.4.2" },
+  "devDependencies": { "aws-cdk": "^2.1030.0" }
+}
