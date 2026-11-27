@@ -38,7 +38,7 @@ async function call<T>(method: string, url: string, body?: unknown): Promise<T> 
 async function plan(brief: string, agent: string, onStage: (s: PlanStage) => void): Promise<{ spec: Spec | ProwessSpec; notes: Notes }> {
   let r: Response;
   try {
-    r = await fetch('/api/plan', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ brief, agent }) });
+    r = await fetch('api/plan', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ brief, agent }) });
   } catch {
     throw new Error('The Studio server is not reachable. Check that it is running.');
   }
@@ -61,10 +61,10 @@ async function plan(brief: string, agent: string, onStage: (s: PlanStage) => voi
 
 export const api = {
   plan,
-  similar: (brief: string) => call<{ jobs: Job[]; pastFiles: PastFile[] }>('GET', `/api/similar?brief=${encodeURIComponent(brief)}`),
-  createJob: (agent: string, brief: string, spec: Spec | ProwessSpec, createdBy: string, confirmHits?: boolean) => call<Job>('POST', '/api/jobs', { agent, brief, spec, createdBy, ...(confirmHits && { confirmHits }) }),
-  approveExport: (id: string, approvedBy: string, view: string) => call<Job>('POST', `/api/jobs/${id}/export`, { approvedBy, view, confirmCredits: true }),
-  jobs: () => call<{ items: Job[] }>('GET', '/api/jobs?limit=200'),
-  job: (id: string) => call<Job>('GET', `/api/jobs/${id}`),
-  runners: () => call<{ items: Runner[] }>('GET', '/api/runners'),
+  similar: (brief: string) => call<{ jobs: Job[]; pastFiles: PastFile[] }>('GET', `api/similar?brief=${encodeURIComponent(brief)}`),
+  createJob: (agent: string, brief: string, spec: Spec | ProwessSpec, createdBy: string, confirmHits?: boolean) => call<Job>('POST', 'api/jobs', { agent, brief, spec, createdBy, ...(confirmHits && { confirmHits }) }),
+  approveExport: (id: string, approvedBy: string, view: string) => call<Job>('POST', `api/jobs/${id}/export`, { approvedBy, view, confirmCredits: true }),
+  jobs: () => call<{ items: Job[] }>('GET', 'api/jobs?limit=200'),
+  job: (id: string) => call<Job>('GET', `api/jobs/${id}`),
+  runners: () => call<{ items: Runner[] }>('GET', 'api/runners'),
 };

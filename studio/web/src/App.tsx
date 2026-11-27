@@ -32,7 +32,7 @@ export default function App() {
           <a href="#new" className="flex min-h-11 cursor-pointer items-center gap-3">
             {/* The logo's wordmark is white, so it sits on a dark tile. */}
             <span className="flex h-11 items-center rounded-xl bg-ink px-3">
-              <img src="/logo.png" alt="SBC" width={900} height={323} className="h-7 w-auto" />
+              <img src="logo.png" alt="SBC" width={900} height={323} className="h-7 w-auto" />
             </span>
             <span>
               <span className="block font-semibold leading-tight text-ink">SBC Benchmarking Studio</span>

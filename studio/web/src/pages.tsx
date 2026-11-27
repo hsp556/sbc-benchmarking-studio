@@ -27,7 +27,7 @@ function ExportCard({ job, onChange }: { job: Job; onChange: (j: Job) => void })
             <p className="text-sm"><span className="font-medium">{job.export_file}</span>
               <span className="block text-muted">Approved by {job.approved_by} · {when(job.approved_at ?? null)}
                 {job.credits_before != null ? ` · credit balance before ${job.credits_before}` : ''}{job.credits_after != null ? `, after the display charge ${job.credits_after}` : ''}</span></p>
-            <a href={`/api/jobs/${job.id}/file`} className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-ink px-6 font-medium text-white transition-colors duration-150 hover:bg-accent-strong">
+            <a href={`api/jobs/${job.id}/file`} className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-ink px-6 font-medium text-white transition-colors duration-150 hover:bg-accent-strong">
               <Download className="size-4" aria-hidden />Download Excel</a>
           </div>
         )}
@@ -66,7 +66,7 @@ export function RunPage({ id }: { id: string | null }) {
     let closed = false;
     api.job(id).then((j) => !closed && setJob(j)).catch((e) => setError(e.message));
     // Live progress: each step arrives as the runner finishes it.
-    const es = new EventSource(`/api/jobs/${id}/events`);
+    const es = new EventSource(`api/jobs/${id}/events`);
     const refresh = () => api.job(id).then((j) => !closed && setJob(j)).catch(() => {});
     es.addEventListener('step', (e) => {
       const step = JSON.parse((e as MessageEvent).data) as Step;
