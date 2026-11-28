@@ -59,6 +59,7 @@ $env:RUNNER_AGENT='prowess'; node runner/runner.mjs   # second runner process, f
 node prowess.mjs --job <job.json>               # free check: reloads the page, fills all four forms, reads the hits, runs nothing
 node prowess.mjs --job <job.json> --go          # the real run: 4 Execute clicks (hits), then both CSVs into runs/<job>-<time>/
 node explore/prowess-history.mjs                # today's commands, status and company counts (free)
+node explore/prowess-groups.mjs                 # rebuilds sop/prowess-product-groups.json from the industry tree (free)
 ```
 A Prowess job file is `{ job, groups: ["Software services"], fromYear: 2023, toYear: 2025, rptYear: 2024 }` (March year-ends).
 
